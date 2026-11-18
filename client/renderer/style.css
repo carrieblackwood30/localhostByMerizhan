@@ -1,0 +1,275 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #101712;
+    color: #edf5ef;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 82px;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #17221b;
+    border-bottom: 1px solid #29382d;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: #a4dc8b;
+    color: #142018;
+    font-weight: 900;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.brand h1 {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.brand p {
+    color: #8d9e91;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 5px 0 0;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    color: #a5b5a9;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #e2a54b;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background: #69d68b;
+    box-shadow: 0 0 12px #69d68b;
+}
+
+.content {
+    width: 100%;
+    max-width: 680px;
+    margin: 55px auto;
+    padding: 0 25px;
+    flex: 1;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    color: #91c77d;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.welcome p {
+    color: #8e9d91;
+    font-size: 14px;
+}
+
+.panel, .room-panel {
+    background: #18231c;
+    border: 1px solid #304035;
+    border-radius: 13px;
+    padding: 25px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #304035;
+    margin-bottom: 25px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #91a194;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #a4dc8b;
+    border-bottom: 2px solid #a4dc8b;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form label {
+    font-size: 12px;
+    color: #a9b8ac;
+    margin-top: 5px;
+}
+
+input {
+    width: 100%;
+    height: 44px;
+    border-radius: 7px;
+    border: 1px solid #354639;
+    background: #111a14;
+    color: white;
+    padding: 0 13px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #91c77d;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary {
+    margin-top: 14px;
+    height: 47px;
+    background: #a4dc8b;
+    color: #142018;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+}
+
+.primary:hover {
+    background: #b9eca1;
+}
+
+.secondary {
+    padding: 10px 15px;
+    border: 1px solid #435748;
+    background: #26372c;
+    color: white;
+    border-radius: 7px;
+}
+
+.danger {
+    width: 100%;
+    height: 43px;
+    margin-top: 25px;
+    background: #472b2b;
+    border: 1px solid #744343;
+    color: #ffaaaa;
+    border-radius: 7px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    color: #ff8585;
+    font-size: 12px;
+    min-height: 16px;
+}
+
+.room-panel {
+    margin-top: 20px;
+}
+
+.room-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.room-heading h2 {
+    font-size: 34px;
+    letter-spacing: 5px;
+    margin: 8px 0 20px;
+    color: #a4dc8b;
+}
+
+.players-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #304035;
+    padding-bottom: 12px;
+}
+
+.players-heading h3 {
+    font-size: 14px;
+}
+
+.players-heading span {
+    font-size: 12px;
+    color: #a4dc8b;
+}
+
+.players-list {
+    padding: 12px 0;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #202e24;
+    margin-bottom: 7px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.host-label {
+    color: #a4dc8b;
+    font-size: 11px;
+}
+
+footer {
+    padding: 20px 35px;
+    border-top: 1px solid #29382d;
+    color: #647568;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+footer span {
+    float: right;
+}

@@ -1,0 +1,12 @@
+
+name = "warcraft-lan-server"
+main = "cloudflare/worker.js"
+compatibility_date = "2026-11-18"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "RoomManager"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RoomManager"]

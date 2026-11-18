@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Warcraft LAN Connect</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">W</div>
+                <div>
+                    <h1>WARCRAFT LAN CONNECT</h1>
+                    <p>PRIVATE GAMING NETWORK</p>
+                </div>
+            </div>
+
+            <div class="connection">
+                <span id="statusDot" class="status-dot"></span>
+                <span id="serverStatus">Подключение...</span>
+            </div>
+        </header>
+
+        <main class="content">
+
+            <section class="welcome">
+                <span class="eyebrow">WARCRAFT III NETWORK</span>
+                <h2>Играй вместе с друзьями</h2>
+                <p>Создавай комнаты и подключайся к другим игрокам.</p>
+            </section>
+
+            <section class="panel">
+
+                <div class="tabs">
+                    <button class="tab active" id="createTab">
+                        Создать комнату
+                    </button>
+
+                    <button class="tab" id="joinTab">
+                        Присоединиться
+                    </button>
+                </div>
+
+                <div id="createForm" class="form">
+
+                    <label>Твоё имя</label>
+                    <input id="playerName" maxlength="24"
+                        placeholder="Например, Meirzhan">
+
+                    <label>Пароль комнаты</label>
+                    <input id="roomPassword" type="password"
+                        placeholder="Минимум 6 символов">
+
+                    <button id="createButton" class="primary">
+                        Создать игровую комнату
+                    </button>
+
+                </div>
+
+                <div id="joinForm" class="form hidden">
+
+                    <label>Твоё имя</label>
+                    <input id="joinName" maxlength="24"
+                        placeholder="Имя игрока">
+
+                    <label>Код комнаты</label>
+                    <input id="roomCode" maxlength="6"
+                        placeholder="Например, BF8037">
+
+                    <label>Пароль комнаты</label>
+                    <input id="joinPassword" type="password"
+                        placeholder="Пароль">
+
+                    <button id="joinButton" class="primary">
+                        Подключиться
+                    </button>
+
+                </div>
+
+                <p id="errorMessage" class="error"></p>
+
+            </section>
+
+            <section id="roomPanel" class="room-panel hidden">
+
+                <div class="room-heading">
+                    <div>
+                        <span class="eyebrow">ТВОЯ ИГРОВАЯ КОМНАТА</span>
+                        <h2 id="roomCodeDisplay">------</h2>
+                    </div>
+
+                    <button id="copyCode" class="secondary">
+                        Копировать код
+                    </button>
+                </div>
+
+                <div class="players-heading">
+                    <h3>Игроки</h3>
+                    <span id="playerCount">0 / 5</span>
+                </div>
+
+                <div id="playersList" class="players-list"></div>
+
+                <button id="leaveButton" class="danger">
+                    Покинуть комнату
+                </button>
+
+            </section>
+
+        </main>
+
+        <footer>
+            WARCRAFT LAN CONNECT <span>VERSION 0.1.0</span>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

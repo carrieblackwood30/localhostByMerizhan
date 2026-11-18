@@ -1,0 +1,53 @@
+{
+  "name": "warcraft-lan-connect",
+  "version": "0.1.0",
+  "description": "Private virtual gaming network for Warcraft III",
+  "author": "Warcraft LAN Connect",
+  "main": "client/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^45.3.4",
+    "electron-builder": "^24.13.3",
+    "nodemon": "^3.1.7",
+    "wrangler": "^4.164.0"
+  },
+  "build": {
+    "appId": "com.warcraftlan.connect",
+    "productName": "Warcraft LAN Connect",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "client/**/*",
+      "shared/**/*",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
